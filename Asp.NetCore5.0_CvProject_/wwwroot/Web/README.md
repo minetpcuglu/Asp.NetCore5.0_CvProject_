@@ -1,115 +1,62 @@
-Introduction
-============
+# [Start Bootstrap - SB Admin](https://startbootstrap.com/templates/sb-admin/)
 
-[![Build Status](https://img.shields.io/travis/ColorlibHQ/AdminLTE/master.svg)](https://travis-ci.org/ColorlibHQ/AdminLTE)
-[![npm version](https://img.shields.io/npm/v/admin-lte/latest.svg)](https://www.npmjs.com/package/admin-lte)
-[![Packagist](https://img.shields.io/packagist/v/almasaeed2010/adminlte.svg)](https://packagist.org/packages/almasaeed2010/adminlte)
-[![CDNJS](https://img.shields.io/cdnjs/v/admin-lte.svg)](https://cdnjs.com/libraries/admin-lte)
+[SB Admin](http://startbootstrap.com/templates/sb-admin/) is an open source, admin dashboard template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
 
-**AdminLTE** is a fully responsive administration template. Based on **[Bootstrap 4](https://getbootstrap.com)** framework.
-Highly customizable and easy to use. Fits many screen resolutions from small mobile devices to large desktops.
+## Preview
 
-**Preview on [AdminLTE.io](https://adminlte.io/themes/v3)**
+[![SB Admin Preview](https://startbootstrap.com/assets/img/screenshots/templates/sb-admin.png)](https://blackrockdigital.github.io/startbootstrap-sb-admin/)
 
-Looking for Premium Templates?
-------------------------------
-AdminLTE.io just opened a new premium templates page. Hand picked to ensure the best quality and the most affordable
-prices. Visit https://adminlte.io/premium for more information.
+**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-sb-admin/)**
 
-!["AdminLTE Presentation"](https://adminlte.io/AdminLTE3.png "AdminLTE Presentation")
+## Status
 
-**AdminLTE** has been carefully coded with clear comments in all of its JS, SCSS and HTML files.
-SCSS has been used to increase code customizability.
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-sb-admin/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-sb-admin.svg)](https://www.npmjs.com/package/startbootstrap-sb-admin)
+[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-sb-admin.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-sb-admin)
+[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin)
+[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-sb-admin?type=dev)
 
-Installation
-------------
-There are multiple ways to install AdminLTE.
+## Download and Installation
 
-#### Download:
+To begin using this template, choose one of the following options to get started:
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/templates/sb-admin/)
+* Install via npm: `npm i startbootstrap-sb-admin`
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-sb-admin.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-sb-admin)
 
-Download from [Github releases](https://github.com/ColorlibHQ/AdminLTE/releases).
+## Usage
 
-#### Using The Command Line:
+### Basic Usage
 
-__Via NPM__
-```bash
-npm install admin-lte@^3.0 --save
-```
+After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-__Via Yarn__
-```bash
-yarn add admin-lte@^3.0
-```
+### Advanced Usage
 
-__Via Composer__
-```bash
-composer require "almasaeed2010/adminlte=~3.0"
-```
+After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `scripts/` directory to see which tasks are included with the dev environment.
 
-__Via Git__
-- Clone to your machine
-```
-git clone https://github.com/ColorlibHQ/AdminLTE.git
-```
+## Bugs and Issues
 
-Documentation
--------------
-Visit the [online documentation](https://adminlte.io/docs/3.0/) for the most
-updated guide. Information will be added on a weekly basis.
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-sb-admin/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/templates/sb-admin/).
 
-Browser Support
----------------
-- IE 10+
-- Firefox (latest)
-- Chrome (latest)
-- Safari (latest)
-- Opera (latest)
+## Custom Builds
 
-Contribution
-------------
-Contribution are always **welcome and recommended**! Here is how:
+You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
 
-- Fork the repository ([here is the guide](https://help.github.com/articles/fork-a-repo/)).
-- Clone to your machine ```git clone https://github.com/YOUR_USERNAME/AdminLTE.git```
-- Create a new branch
-- Make your changes
-- Create a pull request
+## About
 
-#### Compile dist files
-To compile the dist files you need nodejs/npm, clone/download the repo then:
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
-1. `npm install` (install npm deps)
-2. _Optional:_ `npm run dev` (developer mode, autocompile with browsersync support for live demo)
-3. `npm run production` (compile css/js files)
+* https://startbootstrap.com
+* https://twitter.com/SBootstrap
 
-#### Contribution Requirements:
-- When you contribute, you agree to give a non-exclusive license to AdminLTE.io to use that contribution in any context as we (AdminLTE.io) see appropriate.
-- If you use content provided by another party, it must be appropriately licensed using an [open source](http://opensource.org/licenses) license.
-- Contributions are only accepted through Github pull requests.
-- Finally, contributed code must work in all supported browsers (see above for browser support).
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
 
-License
--------
-AdminLTE is an open source project by [AdminLTE.io](https://adminlte.io) that is licensed under [MIT](http://opensource.org/licenses/MIT). AdminLTE.io
-reserves the right to change the license of future releases.
+* http://davidmiller.io
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
 
-Legacy Releases
----------------
-- [AdminLTE 2](https://github.com/ColorlibHQ/AdminLTE/releases/tag/v2.4.18)
-- [AdminLTE 1](https://github.com/ColorlibHQ/AdminLTE/releases/tag/1.3.1)
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
 
-Change log
-----------
-Visit the [releases](https://github.com/ColorlibHQ/AdminLTE/releases) page to view the changelog
+## Copyright and License
 
-Image Credits
--------------
-[Pixeden](http://www.pixeden.com/psd-web-elements/flat-responsive-showcase-psd)
-
-[Graphicsfuel](http://www.graphicsfuel.com/2013/02/13-high-resolution-blur-backgrounds/)
-
-[Pickaface](http://pickaface.net/)
-
-[Unsplash](https://unsplash.com/)
-
-[Uifaces](http://uifaces.com/)
+Copyright 2013-2020 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-sb-admin/blob/gh-pages/LICENSE) license.

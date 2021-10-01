@@ -1,0 +1,27 @@
+﻿@model List<Experience>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="resume-section" id="experience">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Deneyim</h2>
+        @foreach (var item in Model)
+        {
+
+
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0">@item.Date</h3>
+                    <br />
+                    <div class="subheading mb-3">@item.Title</div>
+
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">@item.Date</span></div>
+            </div>
+        }
+
+    </div>
+</section>

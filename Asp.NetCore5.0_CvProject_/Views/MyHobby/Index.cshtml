@@ -1,0 +1,20 @@
+﻿@model List<MyHobby>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section class="resume-section" id="interests">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Hobilerim</h2>
+        @foreach (var item in Model)
+        {
+
+
+
+            <p class="mb-0"> # @item.Hobby</p>
+        }
+    </div>
+</section>
+

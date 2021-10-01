@@ -1,0 +1,27 @@
+﻿@model List<EducationLife>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section class="resume-section" id="education">
+    <div class="resume-section-content">
+        <h2 class="mb-5">Eğitim</h2>
+        @foreach (var item in Model)
+        {
+
+
+            <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                <div class="flex-grow-1">
+                    <h3 class="mb-0"> @item.SubTitle</h3>
+                    <div class="subheading mb-3">@item.Title</div>
+
+                    <p>Ort: @item.NoteAverage</p>
+                </div>
+                <div class="flex-shrink-0"><span class="text-primary">@item.Date</span></div>
+            </div>
+
+        }
+    </div>
+</section>
+
