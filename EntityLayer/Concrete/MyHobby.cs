@@ -10,9 +10,9 @@ namespace EntityLayer.Concrete
    public class MyHobby
     {
         [Key]
-        public int HobbyId { get; set; }
+        public int  HobbyId { get; set; }
 
         [StringLength(500)]
-        public string Hobby { get; set; }
+        public string  Hobby { get; set; }
     }
 }

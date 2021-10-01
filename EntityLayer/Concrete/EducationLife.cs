@@ -21,5 +21,6 @@ namespace EntityLayer.Concrete
         [StringLength(6)]
         public string NoteAverage { get; set; }
         public string Date { get; set; }
+
     }
 }

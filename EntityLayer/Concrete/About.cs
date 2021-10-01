@@ -32,6 +32,6 @@ namespace EntityLayer.Concrete
 
         [StringLength(700)]
         public string DipNot { get; set; }
-
+        
     }
 }
