@@ -12,7 +12,7 @@ namespace DataAccessLayer.Concrete.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("server=DESKTOP-RQ8KHFA;database=CoreCvProject;integrated security=true;");
+            optionsBuilder.UseSqlServer("server=DESKTOP-RQ8KHFA;database=CoreCvDB;integrated security=true;");
         }
 
         public DbSet<Award> Awards { get; set; }
