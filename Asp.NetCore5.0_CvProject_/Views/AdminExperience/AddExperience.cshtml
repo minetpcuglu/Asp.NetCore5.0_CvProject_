@@ -1,0 +1,30 @@
+﻿@model Experience
+@{
+    ViewData["Title"] = "AddExperience";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Deneyim Ekleme Sayfası</h2>
+@using (Html.BeginForm("AddExperience", "AdminExperience", FormMethod.Post))
+{
+<div class="form-group">
+
+
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
+    <br />
+    @Html.Label("Yıl")
+    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+    @*@Html.ValidationMessageFor(x => x.WriterSurname)*@
+    <br />
+
+
+
+    <button class="btn btn-outline-success"><b>Ekle</b></button>
+
+
+</div>
+}
+

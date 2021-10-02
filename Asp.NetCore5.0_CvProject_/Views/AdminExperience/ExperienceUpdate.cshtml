@@ -1,0 +1,32 @@
+﻿@model Experience
+@{
+    ViewData["Title"] = "ExperienceUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Deneyim Düzenleme Sayfası</h2>
+@using (Html.BeginForm("ExperienceUpdate", "AdminExperience", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.HiddenFor(x => x.ExperienceId, new { @class = "form-control" })
+
+        <br />
+        @Html.Label("Başlık")
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
+        <br />
+        @Html.Label("Yıl")
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.WriterSurname)*@
+        <br />
+
+
+        <button class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
+
+
+    </div>
+}
+
+

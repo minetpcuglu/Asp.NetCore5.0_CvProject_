@@ -1,0 +1,43 @@
+﻿@model List<About>
+@{
+    ViewData["Title"] = "AboutIndex";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th> Adı</th>
+        <th> Soyadı</th>
+        <th> Mail</th>
+        <th> Telefon</th>
+        <th> Görsel</th>
+        <th> Kendinden Bahset</th>
+        <th> Güncelle</th>
+  
+
+    </tr>
+
+    @foreach (var about in Model)
+    {
+    <tr>
+    <th>@about.AboutId</th>
+    <td>@about.Name</td>
+    <td>@about.SurName</td>
+    <td>@about.Mail</td>
+  
+    <td>@about.TelephoneNumber</td>
+    <th>
+        <img src="@about.ImagePath" style="width:50px;" height:"25px;" />
+
+    </th>
+    <td>@about.DipNot</td>
+
+    <td><a href="/Admin/AboutUpdate/@about.AboutId" class="btn btn-outline-warning"><b>Güncelle</b></a></td>
+   
+
+
+</tr>
+    }
+</table>
+<br />

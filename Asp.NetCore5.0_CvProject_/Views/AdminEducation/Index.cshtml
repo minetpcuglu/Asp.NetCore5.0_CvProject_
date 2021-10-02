@@ -1,0 +1,41 @@
+﻿@model List<EducationLife>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th> Deneyim</th>
+        <th> Tarih</th>
+        <th> Güncelle</th>
+
+
+
+
+    </tr>
+
+    @foreach (var education in Model)
+    {
+<tr>
+    <th>@education.EducationId</th>
+    <th>@education.SubTitle</th>
+    <td>@education.Title</td>
+    <td>@education.Date</td>
+    <td>@education.NoteAverage</td>
+
+
+    <td><a href="/AdminExperience/ExperienceUpdate/@education.EducationId" class="btn btn-outline-warning"><b>Güncelle</b></a></td>
+
+
+
+</tr>
+    }
+
+</table>
+<br />
+<a href="/AdminExperience/AddExperience" class="btn btn-outline-dark"> <b>Deneyim Ekle</b></a>
+<br />
+

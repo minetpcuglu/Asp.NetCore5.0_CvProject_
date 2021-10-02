@@ -1,0 +1,51 @@
+﻿@model About 
+@{
+    ViewData["Title"] = "AboutUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Profil Düzenleme Sayfası</h2>
+@using (Html.BeginForm("AboutUpdate", "Admin", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.HiddenFor(x => x.AboutId, new { @class = "form-control" })
+
+        <br />
+        @Html.Label(" Ad")
+        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
+        <br />
+        @Html.Label("Soyad")
+        @Html.TextBoxFor(x => x.SurName, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.WriterSurname)*@
+        <br />
+        @Html.Label("Mail Adresi")
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Mail)
+        <br />
+        @Html.Label("Açık Adres")
+        @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Adress)
+        <br />
+        @Html.Label("Resim Linki")
+        @Html.TextBoxFor(x => x.ImagePath, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.ImagePath)
+        <br />
+        @Html.Label("Telefon Numarası")
+        @Html.TextBoxFor(x => x.TelephoneNumber, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.TelephoneNumber)
+
+        <br />
+        @Html.Label("Kendinden Bahset")
+        @Html.TextBoxFor(x => x.DipNot, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.DipNot)
+        <br />
+
+        <button class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
+
+
+    </div>
+}
+
