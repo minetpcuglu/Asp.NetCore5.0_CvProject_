@@ -1,0 +1,42 @@
+﻿@model EducationLife
+@{
+    ViewData["Title"] = "AddEducation";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2>Eğitim Ekleme Sayfası</h2>
+<br />
+@using (Html.BeginForm("AddEducation", "AdminEducation", FormMethod.Post))
+{
+    <div class="form-group">
+
+       
+
+        @Html.Label("Bölüm")
+        @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
+        <br />
+
+        @Html.Label("Okul")
+        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
+        <br />
+        @Html.Label("AGNO")
+        @Html.TextBoxFor(x => x.NoteAverage, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
+        <br />
+        @Html.Label("Yıl")
+        @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.WriterSurname)*@
+        <br />
+
+
+        <button class="btn btn-outline-success"><b>Ekle</b></button>
+
+
+    </div>
+}
+
+
+

@@ -8,7 +8,9 @@
 <table class="table table-hover">
     <tr>
         <th>#</th>
-        <th> Deneyim</th>
+        <th> Bölüm</th>
+        <th> Okul</th>
+        <th> AGNO</th>
         <th> Tarih</th>
         <th> Güncelle</th>
 
@@ -23,11 +25,12 @@
     <th>@education.EducationId</th>
     <th>@education.SubTitle</th>
     <td>@education.Title</td>
+
+    <th>@education.NoteAverage</th>
     <td>@education.Date</td>
-    <td>@education.NoteAverage</td>
 
 
-    <td><a href="/AdminExperience/ExperienceUpdate/@education.EducationId" class="btn btn-outline-warning"><b>Güncelle</b></a></td>
+    <td><a href="/AdminEducation/EducationUpdate/@education.EducationId" class="btn btn-outline-warning"><b>Güncelle</b></a></td>
 
 
 
@@ -36,6 +39,6 @@
 
 </table>
 <br />
-<a href="/AdminExperience/AddExperience" class="btn btn-outline-dark"> <b>Deneyim Ekle</b></a>
+<a href="/AdminEducation/AddEducation" class="btn btn-outline-dark"> <b>Egitim Ekle</b></a>
 <br />
 
