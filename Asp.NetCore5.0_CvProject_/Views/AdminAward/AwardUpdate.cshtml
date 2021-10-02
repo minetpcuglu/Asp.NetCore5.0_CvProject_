@@ -1,0 +1,31 @@
+﻿@model Award
+@{
+    ViewData["Title"] = "AwardUpdate";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+<br />
+<h2> Yetenek Düzenleme Sayfası</h2>
+@using (Html.BeginForm("AwardUpdate", "AdminAward", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.HiddenFor(x => x.AwardId, new { @class = "form-control" })
+
+        <br />
+        @Html.Label("Hobi")
+        @Html.TextBoxFor(x => x.AwardName, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
+        <br />
+
+
+
+        <button class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
+
+
+    </div>
+}
+
+
+

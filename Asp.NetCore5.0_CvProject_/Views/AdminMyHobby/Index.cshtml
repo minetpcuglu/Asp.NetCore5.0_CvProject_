@@ -1,0 +1,37 @@
+﻿@model List<MyHobby>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th> Hobi</th>
+        <th> Güncelle</th>
+
+    </tr>
+
+    @foreach (var myHobby in Model)
+    {
+        <tr>
+            <th>@myHobby.HobbyId</th>
+            <th>@myHobby.Hobby</th>
+
+
+
+            <td><a href="/AdminMyHobby/HobbyUpdate/@myHobby.HobbyId" class="btn btn-outline-warning"><b>Güncelle</b></a></td>
+
+
+
+        </tr>
+    }
+
+</table>
+<br />
+<a href="/AdminMyHobby/AddHobby" class="btn btn-outline-dark"> <b>Hobi Ekle</b></a>
+<br />
+
+
+

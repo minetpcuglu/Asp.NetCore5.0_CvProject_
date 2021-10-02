@@ -1,0 +1,34 @@
+﻿@model List<Award>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<table class="table table-hover">
+    <tr>
+        <th>#</th>
+        <th> Yetenek</th>
+        <th> Güncelle</th>
+
+    </tr>
+
+    @foreach (var award in Model)
+    {
+        <tr>
+            <th>@award.AwardId</th>
+            <th>@award.AwardName</th>
+
+
+
+            <td><a href="/AdminAward/AwardUpdate/@award.AwardId" class="btn btn-outline-warning"><b>Güncelle</b></a></td>
+
+
+
+        </tr>
+    }
+
+</table>
+<br />
+<a href="/AdminAward/AddAward" class="btn btn-outline-dark"> <b>Yetenek Ekle</b></a>
+<br />
+

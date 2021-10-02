@@ -1,0 +1,29 @@
+﻿@model Ability
+@{
+    ViewData["Title"] = "AddAbility";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<h2>Yetenek Ekleme Sayfası</h2>
+@using (Html.BeginForm("AddAbility", "AdminAbility", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.HiddenFor(x => x.AbilityId, new { @class = "form-control" })
+
+        <br />
+        @Html.Label("Yetenek")
+        @Html.TextBoxFor(x => x.MyAbility, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
+        <br />
+
+
+
+        <button class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
+
+
+    </div>
+}
+
+
+

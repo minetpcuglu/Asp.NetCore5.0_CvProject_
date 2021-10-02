@@ -1,0 +1,27 @@
+﻿@model Award
+@{
+    ViewData["Title"] = "AddHobby";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<h2> Hobi Düzenleme Sayfası</h2>
+@using (Html.BeginForm("AddAward", "AdminAward", FormMethod.Post))
+{
+    <div class="form-group">
+
+        @Html.HiddenFor(x => x.AwardId, new { @class = "form-control" })
+
+        <br />
+        @Html.Label("Hobi")
+        @Html.TextBoxFor(x => x.AwardName, new { @class = "form-control" })
+        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
+        <br />
+
+
+
+        <button class="btn btn-outline-success"><b>Ekle</b></button>
+
+
+    </div>
+}
