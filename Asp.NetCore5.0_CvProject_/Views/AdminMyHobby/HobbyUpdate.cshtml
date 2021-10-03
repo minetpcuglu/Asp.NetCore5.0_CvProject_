@@ -5,26 +5,25 @@
 }
 
 <br />
-<h2> Hobi Düzenleme Sayfası</h2>
-@using (Html.BeginForm("HobbyUpdate", "AdminMyHobby", FormMethod.Post))
-{
+<h2>Profil Düzenleme Sayfası</h2>
+<br />
+<form method="post" asp-controller="AdminMyHobby" asp-action="HobbyUpdate">
+    <input type="hidden" name="HobbyId" value="@Model.HobbyId" />
     <div class="form-group">
-
-        @Html.HiddenFor(x => x.HobbyId, new { @class = "form-control" })
-
-        <br />
-        @Html.Label("Hobi")
-        @Html.TextBoxFor(x => x.Hobby, new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
-        <br />
-
-
-
-        <button class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
-
-
+        <label asp-for="Hobby"> <b>Hobi:</b></label>
+        <input asp-for="Hobby" class="form-control" value="@Model.Hobby" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
     </div>
-}
+
+
+    <button type="submit" class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
+</form>
+
+
+
+
+
+
 
 
 

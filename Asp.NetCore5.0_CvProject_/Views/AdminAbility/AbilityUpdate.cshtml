@@ -1,29 +1,22 @@
-﻿@model Ability 
+﻿@model Ability
 @{
     ViewData["Title"] = "AbilityUpdate";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
 <br />
-<h2>Yetenek Düzenleme Sayfası</h2>
-@using (Html.BeginForm("AbilityUpdate", "AdminAbility", FormMethod.Post))
-{
+<h2>Profil Düzenleme Sayfası</h2>
+<br />
+<form method="post" asp-controller="AdminAbility" asp-action="AbilityUpdate">
+    <input type="hidden" name="AbilityId" value="@Model.AbilityId" />
     <div class="form-group">
-
-        @Html.HiddenFor(x => x.AbilityId, new { @class = "form-control" })
-
-        <br />
-        @Html.Label("Yetenek")
-        @Html.TextBoxFor(x => x.MyAbility, new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
-        <br />
-
-
-
-        <button class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
-
-
+        <label asp-for="MyAbility"> <b>Yetenek:</b></label>
+        <input asp-for="MyAbility" class="form-control" value="@Model.MyAbility" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
     </div>
-}
+
+
+    <button type="submit" class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
+</form>
 
 

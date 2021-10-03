@@ -4,28 +4,19 @@
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
-
 <br />
-<h2> Yetenek Düzenleme Sayfası</h2>
-@using (Html.BeginForm("AwardUpdate", "AdminAward", FormMethod.Post))
-{
+<h2>Profil Düzenleme Sayfası</h2>
+<br />
+<form method="post" asp-controller="AdminAward" asp-action="AwardUpdate">
+    <input type="hidden" name="AwardId" value="@Model.AwardId" />
     <div class="form-group">
-
-        @Html.HiddenFor(x => x.AwardId, new { @class = "form-control" })
-
-        <br />
-        @Html.Label("Hobi")
-        @Html.TextBoxFor(x => x.AwardName, new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
-        <br />
-
-
-
-        <button class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
-
-
+        <label asp-for="AwardName"> <b>Ödül:</b></label>
+        <input asp-for="AwardName" class="form-control" value="@Model.AwardName" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
     </div>
-}
 
+
+    <button type="submit" class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
+</form>
 
 

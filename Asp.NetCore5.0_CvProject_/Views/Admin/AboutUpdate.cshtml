@@ -1,51 +1,54 @@
-﻿@model About 
+﻿@model About
 @{
     ViewData["Title"] = "AboutUpdate";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
 }
 
+
 <br />
 <h2>Profil Düzenleme Sayfası</h2>
-@using (Html.BeginForm("AboutUpdate", "Admin", FormMethod.Post))
-{
+<br />
+<form method="post" asp-controller="Admin" asp-action="AboutUpdate">
+    <input type="hidden" name="AboutId" value="@Model.AboutId" />
     <div class="form-group">
-
-        @Html.HiddenFor(x => x.AboutId, new { @class = "form-control" })
-
-        <br />
-        @Html.Label(" Ad")
-        @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
-        <br />
-        @Html.Label("Soyad")
-        @Html.TextBoxFor(x => x.SurName, new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(x => x.WriterSurname)*@
-        <br />
-        @Html.Label("Mail Adresi")
-        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.Mail)
-        <br />
-        @Html.Label("Açık Adres")
-        @Html.TextBoxFor(x => x.Adress, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.Adress)
-        <br />
-        @Html.Label("Resim Linki")
-        @Html.TextBoxFor(x => x.ImagePath, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.ImagePath)
-        <br />
-        @Html.Label("Telefon Numarası")
-        @Html.TextBoxFor(x => x.TelephoneNumber, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.TelephoneNumber)
-
-        <br />
-        @Html.Label("Kendinden Bahset")
-        @Html.TextBoxFor(x => x.DipNot, new { @class = "form-control" })
-        @Html.ValidationMessageFor(x => x.DipNot)
-        <br />
-
-        <button class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
-
-
+        <label asp-for="Name"> <b>İsim:</b></label>
+        <input asp-for="Name" class="form-control" value="@Model.Name" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
     </div>
-}
 
+    <div class="form-group">
+        <label asp-for="SurName"> <b>Soyisim:</b></label>
+        <input asp-for="SurName" class="form-control" value="@Model.SurName" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+
+    </div> <div class="form-group">
+        <label asp-for="Mail"> <b>E-Mail:</b></label>
+        <input asp-for="Mail" class="form-control" value="@Model.Mail" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+
+    </div> <div class="form-group">
+        <label asp-for="TelephoneNumber"> <b>Telefon:</b></label>
+        <input asp-for="TelephoneNumber" class="form-control" value="@Model.TelephoneNumber" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Adress"> <b>Adres:</b></label>
+        <input asp-for="Adress" class="form-control" value="@Model.Adress" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="ImagePath"> <b>Resim:</b></label>
+        <input  asp-for="ImagePath" class="form-control" value="@Model.ImagePath" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DipNot"> <b>Kendinden Bahset:</b></label>
+        <textarea asp-for="DipNot" class="form-control" value="@Model.DipNot" ></textarea> 
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+    </div>
+
+    <button type="submit" class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
+</form>

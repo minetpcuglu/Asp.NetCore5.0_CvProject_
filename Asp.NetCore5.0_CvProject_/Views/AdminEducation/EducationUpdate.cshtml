@@ -5,36 +5,29 @@
 }
 
 <br />
-<h2>Eğitim Düzenleme Sayfası</h2>
-@using (Html.BeginForm("EducationUpdate", "AdminEducation", FormMethod.Post))
-{
-<div class="form-group">
-
-    @Html.HiddenFor(x => x.EducationId, new { @class = "form-control" })
-
-    <br />
-    @Html.Label("Bölüm")
-    @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
-    @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
-    <br />
-
-    @Html.Label("Okul")
-    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
-    @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
-    <br />
-    @Html.Label("AGNO")
-    @Html.TextBoxFor(x => x.NoteAverage, new { @class = "form-control" })
-    @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
-    <br />
-    @Html.Label("Yıl")
-    @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
-    @*@Html.ValidationMessageFor(x => x.WriterSurname)*@
-    <br />
+<h2>Profil Düzenleme Sayfası</h2>
+<br />
+<form method="post" asp-controller="AdminEducation" asp-action="EducationUpdate">
+    <input type="hidden" name="EducationId" value="@Model.EducationId" />
+    <div class="form-group">
+        <label asp-for="SubTitle"> <b>Okul:</b></label>
+        <input asp-for="SubTitle" class="form-control" value="@Model.SubTitle" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+    </div>
+    <div class="form-group">
+        <label asp-for="Title"> <b>Bölüm:</b></label>
+        <input asp-for="Title" class="form-control" value="@Model.Title" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+    </div>  <div class="form-group">
+        <label asp-for="NoteAverage"> <b>AGNO:</b></label>
+        <input asp-for="NoteAverage" class="form-control" value="@Model.NoteAverage" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+    </div>  <div class="form-group">
+        <label asp-for="Date"> <b>Tarih:</b></label>
+        <input asp-for="Date" class="form-control" value="@Model.Date" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+    </div>
 
 
-    <button class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
-
-
-</div>
-}
-
+    <button type="submit" class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
+</form>
