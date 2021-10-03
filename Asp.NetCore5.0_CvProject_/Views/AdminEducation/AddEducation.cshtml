@@ -5,38 +5,27 @@
 }
 
 <br />
-<h2>Eğitim Ekleme Sayfası</h2>
+<h2>Yetenek Ekleme Sayfası</h2>
 <br />
-@using (Html.BeginForm("AddEducation", "AdminEducation", FormMethod.Post))
-{
+<form method="post" asp-controller="AdminEducation" asp-action="AddEducation">
+
     <div class="form-group">
-
-       
-
-        @Html.Label("Bölüm")
-        @Html.TextBoxFor(x => x.SubTitle, new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
-        <br />
-
-        @Html.Label("Okul")
-        @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
-        <br />
-        @Html.Label("AGNO")
-        @Html.TextBoxFor(x => x.NoteAverage, new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(x => x.UserName)*@ @*//mesajlar*@
-        <br />
-        @Html.Label("Yıl")
-        @Html.TextBoxFor(x => x.Date, new { @class = "form-control" })
-        @*@Html.ValidationMessageFor(x => x.WriterSurname)*@
-        <br />
-
-
-        <button class="btn btn-outline-success"><b>Ekle</b></button>
-
-
+        <label asp-for="SubTitle"> <b>Okul</b></label>
+        <input asp-for="SubTitle" class="form-control" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
     </div>
-}
-
-
-
+    <div class="form-group">
+        <label asp-for="Title"> <b>Bölüm</b></label>
+        <input asp-for="Title" class="form-control" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+    </div> <div class="form-group">
+        <label asp-for="NoteAverage"> <b>AGNO</b></label>
+        <input asp-for="NoteAverage" class="form-control" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+    </div> <div class="form-group">
+        <label asp-for="Date"> <b>Tarih</b></label>
+        <input asp-for="Date" class="form-control" />
+        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+    </div>
+    <button type="submit" class="btn btn-outline-primary"><b>Ekle</b></button>
+</form>
