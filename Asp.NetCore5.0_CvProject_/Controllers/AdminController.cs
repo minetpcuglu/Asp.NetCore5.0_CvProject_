@@ -18,7 +18,7 @@ namespace Asp.NetCore5._0_CvProject_.Controllers
         AboutManager aboutManager = new AboutManager(new EfAboutRepository());
         AdminAboutValidator validationRules = new AdminAboutValidator();
 
-        [AllowAnonymous]
+        
         public IActionResult AboutIndex()
         {
             var deger = aboutManager.GetList();

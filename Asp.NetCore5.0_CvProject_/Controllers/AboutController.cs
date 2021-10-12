@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace Asp.NetCore5._0_CvProject_.Controllers
 {
+  
     [AllowAnonymous]
     public class AboutController : Controller
     {

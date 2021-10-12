@@ -2,12 +2,14 @@
 using DataAccessLayer.Concrete.Context;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace Asp.NetCore5._0_CvProject_.Controllers
@@ -24,16 +26,26 @@ namespace Asp.NetCore5._0_CvProject_.Controllers
         }
 
         [HttpPost]
-        public IActionResult Index(About about)
+        public async Task<IActionResult> Index(About about)
         {
-
-            var value = c.Abouts.FirstOrDefault(x => x.Mail == about.Mail && x.Password == about.Password);
-            if (value!= null)
+            var value = c.Abouts.FirstOrDefault(x => x.Password == about.Password && x.Mail == about.Mail);
+            if (value!=null)
             {
-                HttpContext.Session.SetString("username", about.Mail);
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name,about.Mail)
+                };
+                var userIdentity = new ClaimsIdentity(claims, "a"); //a herhangi bir değer why?
+                ClaimsPrincipal claimsPrincipal = new ClaimsPrincipal(userIdentity);
+                await HttpContext.SignInAsync(claimsPrincipal);
                 return RedirectToAction("AboutIndex", "Admin");
+
             }
-            return View();
+            else
+            {
+                return View();
+            }
+
         }
 
       

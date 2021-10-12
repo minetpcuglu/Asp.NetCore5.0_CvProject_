@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -34,6 +35,14 @@ namespace Asp.NetCore5._0_CvProject_
                 config.Filters.Add(new AuthorizeFilter(policy)); //proje seviyesinde authorize yetkilendirme iþlemi
             });
 
+            services.AddMvc();
+            services.AddAuthentication(
+                CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(x =>
+                {
+                    x.LoginPath = "/Login/Index/";
+                }
+                );
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -55,6 +64,8 @@ namespace Asp.NetCore5._0_CvProject_
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+
+            app.UseAuthentication(); //login 
 
             app.UseSession();//session yönetimi için
 
