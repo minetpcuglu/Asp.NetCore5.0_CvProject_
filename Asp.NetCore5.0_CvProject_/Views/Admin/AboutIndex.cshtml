@@ -13,31 +13,34 @@
         <th> Telefon</th>
         <th> Görsel</th>
         <th> Kendinden Bahset</th>
+        <th> Şifre</th>
+ 
         <th> Güncelle</th>
-  
+
 
     </tr>
 
     @foreach (var about in Model)
     {
-    <tr>
-    <th>@about.AboutId</th>
-    <td>@about.Name</td>
-    <td>@about.SurName</td>
-    <td>@about.Mail</td>
-  
-    <td>@about.TelephoneNumber</td>
-    <th>
-        <img src="@about.ImagePath" style="width:50px;" height:"25px;" />
+        <tr>
+            <th>@about.AboutId</th>
 
-    </th>
-    <td>@about.DipNot</td>
-
-    <td><a href="/Admin/AboutUpdate/@about.AboutId" class="btn btn-outline-warning"><b>Güncelle</b></a></td>
-   
+            <td>@about.Name</td>
+            <td>@about.SurName</td>
+            <td>@about.Mail</td>
+            <td>@about.TelephoneNumber</td>
+            <th>
+                <img src="@about.ImagePath" style="width:50px;" height:"25px;" />
+            </th>
+            <td>@about.DipNot</td>
+            <th>@about.Password</th>
 
 
-</tr>
+            <td><a href="/Admin/AboutUpdate/@about.AboutId" class="btn btn-outline-warning"><b>Güncelle</b></a></td>
+
+
+
+        </tr>
     }
 </table>
 <br />

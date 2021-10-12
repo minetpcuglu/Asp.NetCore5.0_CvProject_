@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules.FluentValidation;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -12,6 +14,7 @@ namespace Asp.NetCore5._0_CvProject_.Controllers
     public class AdminAbilityController : Controller
     {
         AbilityManager abilityManager = new AbilityManager(new EfAbilityRepository());
+        AdminAbilityValidator validationRules = new AdminAbilityValidator();
         public IActionResult Index()
         {
             var value = abilityManager.GetList();
@@ -41,8 +44,21 @@ namespace Asp.NetCore5._0_CvProject_.Controllers
         [HttpPost]
         public IActionResult AddAbility(Ability ability)
         {
-            abilityManager.Add(ability);
-            return RedirectToAction("Index", "Ability");
+            ValidationResult result = validationRules.Validate(ability);
+            if (result.IsValid)
+            {
+                abilityManager.Add(ability);
+                return RedirectToAction("Index", "Ability");
+            }
+            else
+            {
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+            }
+            return View();
         }
     }
 }

@@ -10,45 +10,52 @@
 <br />
 <form method="post" asp-controller="Admin" asp-action="AboutUpdate">
     <input type="hidden" name="AboutId" value="@Model.AboutId" />
+    <input type="hidden" name="AgainPassword" value="@Model.AgainPassword" />
     <div class="form-group">
         <label asp-for="Name"> <b>İsim:</b></label>
-        <input asp-for="Name" class="form-control" value="@Model.Name" />
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <input asp-for="Name" class="form-control" type="text" value="@Model.Name" />
+        @*<span asp-validation-for="Name" class="text-danger"></span>*@
     </div>
 
     <div class="form-group">
         <label asp-for="SurName"> <b>Soyisim:</b></label>
-        <input asp-for="SurName" class="form-control" value="@Model.SurName" />
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <input asp-for="SurName" class="form-control" type="text" value="@Model.SurName" />
+        @*<span asp-validation-for="SurName" class="text-danger"></span>*@
 
     </div> <div class="form-group">
         <label asp-for="Mail"> <b>E-Mail:</b></label>
-        <input asp-for="Mail" class="form-control" value="@Model.Mail" />
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <input asp-for="Mail" class="form-control" type="email" value="@Model.Mail" />
+        @*<span asp-validation-for="Mail" class="text-danger"></span>*@
 
     </div> <div class="form-group">
         <label asp-for="TelephoneNumber"> <b>Telefon:</b></label>
-        <input asp-for="TelephoneNumber" class="form-control" value="@Model.TelephoneNumber" />
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <input asp-for="TelephoneNumber" class="form-control" type="tel" value="@Model.TelephoneNumber" />
+        @*<span asp-validation-for="TelephoneNumber" class="text-danger"></span>*@
     </div>
 
     <div class="form-group">
         <label asp-for="Adress"> <b>Adres:</b></label>
-        <input asp-for="Adress" class="form-control" value="@Model.Adress" />
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <input asp-for="Adress" class="form-control" type="text" value="@Model.Adress" />
+        @*<span asp-validation-for="Adress" class="text-danger"></span>*@
     </div>
 
     <div class="form-group">
         <label asp-for="ImagePath"> <b>Resim:</b></label>
-        <input  asp-for="ImagePath" class="form-control" value="@Model.ImagePath" />
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <input asp-for="ImagePath" class="form-control" value="@Model.ImagePath" />
+        @*<span asp-validation-for="ImagePath" class="text-danger"></span>*@
     </div>
 
     <div class="form-group">
         <label asp-for="DipNot"> <b>Kendinden Bahset:</b></label>
-        <textarea asp-for="DipNot" class="form-control" value="@Model.DipNot" ></textarea> 
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <textarea asp-for="DipNot" class="form-control" value="@Model.DipNot"></textarea>
+        @*<span asp-validation-for="DipNot" class="text-danger"></span>*@
     </div>
+    <div class="form-group">
+        <label asp-for="Password"> <b>Şifre:</b></label>
+        <input asp-for="Password" class="form-control" type="text" value="@Model.Password" />
+        @*<span asp-validation-for="Password" class="text-danger"></span>*@
+    </div>
+
 
     <button type="submit" class="btn btn-outline-success"><b>Değişiklikleri Kaydet</b></button>
 </form>
