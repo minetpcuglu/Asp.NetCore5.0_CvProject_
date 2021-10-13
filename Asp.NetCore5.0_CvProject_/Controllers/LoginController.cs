@@ -43,6 +43,7 @@ namespace Asp.NetCore5._0_CvProject_.Controllers
             }
             else
             {
+                ModelState.AddModelError("", "Hatalı Kullanıcı Adı/Şifre");
                 return View();
             }
 

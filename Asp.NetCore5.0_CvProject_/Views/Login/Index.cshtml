@@ -4,6 +4,7 @@
         <h3 class="tittle"> Giriş Yap</h3>
         <div class="row inner-sec">
             <div class="login p-5 bg-light mx-auto mw-100">
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <form action="#" method="post">
                     <div class="form-group">
                         <label for="exampleInputEmail1 mb-2">Mail Adresi</label>
@@ -19,7 +20,7 @@
                         <label class="form-check-label" for="exampleCheck1">Beni Hatırla</label>
                     </div>
                     <button type="submit" class="btn btn-primary submit mb-4">Giriş Yap</button>
-         
+
                 </form>
             </div>
         </div>
