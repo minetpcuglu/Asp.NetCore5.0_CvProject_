@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-    public interface IAwardService
+    public interface IAwardService:IGenericService<Award>
     {
-        void Add(Award award);
-        void Delete(Award award);
-        void Update(Award award);
-        List<Award> GetList();
-        Award GetById(int id);
+ 
     }
 }

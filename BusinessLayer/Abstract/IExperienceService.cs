@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-  public interface IExperienceService
+  public interface IExperienceService:IGenericService<Experience>
     {
-        void Add(Experience experience);
-        void Delete(Experience experience);
-        void Update(Experience experience);
-        List<Experience> GetList();
-        Experience GetById(int id);
+       
     }
 }

@@ -7,12 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Abstract
 {
-  public interface IEducationLifeService
+    public interface IEducationLifeService :IGenericService<EducationLife>
     {
-        void Add(EducationLife educationLife);
-        void Delete(EducationLife educationLife);
-        void Update(EducationLife educationLife);
-        List<EducationLife> GetList();
-        EducationLife GetById(int id);
+
     }
 }
