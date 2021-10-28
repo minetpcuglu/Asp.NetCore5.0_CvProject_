@@ -8,6 +8,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace Asp.NetCore5._0_CvProject_.Controllers
 {
@@ -15,10 +16,10 @@ namespace Asp.NetCore5._0_CvProject_.Controllers
     {
         AbilityManager abilityManager = new AbilityManager(new EfAbilityRepository());
         AdminAbilityValidator validationRules = new AdminAbilityValidator();
-        public IActionResult Index()
+        public IActionResult Index(int page =1)
         {
             var value = abilityManager.GetList();
-            return View(value);
+            return View(value.ToPagedList(page,5));
         }
         [HttpGet]
         public IActionResult AbilityUpdate(int id)

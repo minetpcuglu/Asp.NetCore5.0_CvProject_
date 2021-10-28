@@ -1,4 +1,4 @@
-﻿@model List<Ability>
+﻿@model IPagedList<Ability>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -18,7 +18,7 @@
         <tr>
             <th>@ability.AbilityId</th>
             <th>@ability.MyAbility</th>
-            
+
 
 
             <td><a href="/AdminAbility/AbilityUpdate/@ability.AbilityId" class="btn btn-outline-warning"><b>Güncelle</b></a></td>
@@ -29,6 +29,8 @@
     }
 
 </table>
+<br />
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
 <br />
 <a href="/AdminAbility/AddAbility" class="btn btn-outline-dark"> <b>Yetenek Ekle</b></a>
 <br />

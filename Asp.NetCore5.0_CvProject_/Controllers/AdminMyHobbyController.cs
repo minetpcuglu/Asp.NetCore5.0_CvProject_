@@ -6,16 +6,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace Asp.NetCore5._0_CvProject_.Controllers
 {
     public class AdminMyHobbyController : Controller
     {
         MyHobbyManager myHobbyManager = new MyHobbyManager(new EfMyHobbyRepository());
-        public IActionResult Index()
+        public IActionResult Index(int page =1)
         {
             var value = myHobbyManager.GetList();
-            return View(value);
+            return View(value.ToPagedList(page,5));
         }
 
         [HttpGet]

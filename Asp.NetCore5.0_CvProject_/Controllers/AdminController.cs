@@ -9,6 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace Asp.NetCore5._0_CvProject_.Controllers
 {
@@ -19,10 +20,10 @@ namespace Asp.NetCore5._0_CvProject_.Controllers
         AdminAboutValidator validationRules = new AdminAboutValidator();
 
         
-        public IActionResult AboutIndex()
+        public IActionResult AboutIndex(int page =1)
         {
             var deger = aboutManager.GetList();
-            return View(deger);
+            return View(deger.ToPagedList(page,5));
         }
 
         [HttpGet]

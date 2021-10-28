@@ -1,4 +1,4 @@
-﻿@model List<Experience>
+﻿@model IPagedList<Experience>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -32,7 +32,11 @@
         </tr>
     }
 
+
 </table>
+
+<br />
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
 <br />
 <a href="/AdminExperience/AddExperience" class="btn btn-outline-dark"> <b>Deneyim Ekle</b></a>
-<br />
+

@@ -1,4 +1,4 @@
-﻿@model List<Award>
+﻿@model IPagedList<Award>
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -28,6 +28,8 @@
     }
 
 </table>
+<br />
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("Index", new { page }))
 <br />
 <a href="/AdminAward/AddAward" class="btn btn-outline-dark"> <b>Ödül Ekle</b></a>
 <br />

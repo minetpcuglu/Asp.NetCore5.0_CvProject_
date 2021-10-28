@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using X.PagedList;
 
 namespace Asp.NetCore5._0_CvProject_.Controllers
 {
@@ -13,10 +14,10 @@ namespace Asp.NetCore5._0_CvProject_.Controllers
     public class AdminExperienceController : Controller
     {
         ExperienceManager experienceManager = new ExperienceManager(new EfExperienceRepository());
-        public IActionResult Index()
+        public IActionResult Index(int page =1)
         {
             var value = experienceManager.GetList();
-            return View(value);
+            return View(value.ToPagedList(page,5));
         }
 
         [HttpGet]

@@ -1,4 +1,4 @@
-﻿@model List<About>
+﻿@model IPagedList<About>
 @{
     ViewData["Title"] = "AboutIndex";
     Layout = "~/Views/Shared/_AdminLayout.cshtml";
@@ -14,7 +14,7 @@
         <th> Görsel</th>
         <th> Kendinden Bahset</th>
         <th> Şifre</th>
- 
+
         <th> Güncelle</th>
 
 
@@ -43,4 +43,5 @@
         </tr>
     }
 </table>
+@Html.PagedListPager((IPagedList)Model, page => Url.Action("AboutIndex", new { page }))
 <br />
