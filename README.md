@@ -22,5 +22,4 @@
 
 ![Admin11](https://user-images.githubusercontent.com/77547699/139311042-8387f4ad-d40c-461c-a6a6-f6805c2bb99d.png)
 
-
 ![hatasayfa](https://user-images.githubusercontent.com/77547699/139311064-6ec463c4-efe1-4cfe-88b3-5c56449c3647.png)
