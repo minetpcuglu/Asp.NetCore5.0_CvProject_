@@ -8,7 +8,7 @@
 <h2>Ödül/Başarı Ekleme Sayfası</h2>
 <br />
 <form method="post" asp-controller="AdminAward" asp-action="AddAward">
-
+    <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
         <label asp-for="AwardName"> <b>Yetenek</b></label>
         <input asp-for="AwardName" class="form-control" />

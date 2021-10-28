@@ -8,24 +8,24 @@
 <h2>Yetenek Ekleme Sayfası</h2>
 <br />
 <form method="post" asp-controller="AdminEducation" asp-action="AddEducation">
-
+    <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
         <label asp-for="SubTitle"> <b>Okul</b></label>
         <input asp-for="SubTitle" class="form-control" />
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <span asp-validation-for="SubTitle" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Title"> <b>Bölüm</b></label>
         <input asp-for="Title" class="form-control" />
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <span asp-validation-for="Title" class="text-danger"></span>
     </div> <div class="form-group">
         <label asp-for="NoteAverage"> <b>AGNO</b></label>
         <input asp-for="NoteAverage" class="form-control" />
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <span asp-validation-for="NoteAverage" class="text-danger"></span>
     </div> <div class="form-group">
         <label asp-for="Date"> <b>Tarih</b></label>
         <input asp-for="Date" class="form-control" />
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <span asp-validation-for="Date" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-outline-primary"><b>Ekle</b></button>
 </form>

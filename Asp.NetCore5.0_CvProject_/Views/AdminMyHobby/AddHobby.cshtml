@@ -8,11 +8,11 @@
 <h2>Hobi Ekleme Sayfası</h2>
 <br />
 <form method="post" asp-controller="AdminHobby" asp-action="AddAHobby">
-
+    <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
         <label asp-for="Hobby"> <b>Hobby:</b></label>
         <input asp-for="Hobby" class="form-control" />
-        @*<span asp-validation-for="CName" class="text-danger"></span>*@
+        <span asp-validation-for="Hobby" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-outline-primary"><b>Ekle</b></button>
 </form>

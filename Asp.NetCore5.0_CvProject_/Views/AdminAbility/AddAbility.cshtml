@@ -7,11 +7,11 @@
 <h2>Yetenek Ekleme Sayfası</h2>
 <br />
 <form method="post" asp-controller="AdminAbility" asp-action="AddAbility">
-
+    <div asp-validation-summary="All" class="text-danger"></div>
     <div class="form-group">
         <label asp-for="MyAbility"> <b>Yetenek</b></label>
         <input asp-for="MyAbility" class="form-control" />
-   
+
         <span asp-validation-for="MyAbility" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-outline-primary"><b>Ekle</b></button>
