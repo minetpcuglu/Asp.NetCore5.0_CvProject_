@@ -1,6 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules.FluentValidation;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -13,6 +15,7 @@ namespace Asp.NetCore5._0_CvProject_.Controllers
     public class AdminMyHobbyController : Controller
     {
         MyHobbyManager myHobbyManager = new MyHobbyManager(new EfMyHobbyRepository());
+        AdminMyHobbyValidator validationRules = new AdminMyHobbyValidator();
         public IActionResult Index(int page =1)
         {
             var value = myHobbyManager.GetList();
@@ -43,8 +46,24 @@ namespace Asp.NetCore5._0_CvProject_.Controllers
         [HttpPost]
         public IActionResult AddHobby(MyHobby myHobby)
         {
-            myHobbyManager.Add(myHobby);
-            return RedirectToAction("Index", "MyHobby");
+            ValidationResult result = validationRules.Validate(myHobby);
+            if (result.IsValid)
+            {
+                myHobbyManager.Add(myHobby);
+                return RedirectToAction("Index", "MyHobby");
+            }
+            else
+            {
+
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+                }
+            }
+            return View();
+
+
+        
         }
     }
 }

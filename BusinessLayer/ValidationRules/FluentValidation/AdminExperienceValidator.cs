@@ -13,6 +13,7 @@ namespace BusinessLayer.ValidationRules.FluentValidation
         public AdminExperienceValidator()
         {
             RuleFor(x => x.Title).NotEmpty().WithMessage("Deneyim Alanı boş geçilemez.");
+            RuleFor(x => x.Date).NotEmpty().WithMessage("Yıl Alanı boş geçilemez.");
             RuleFor(x => x.Title).MaximumLength(200).MinimumLength(10).WithMessage("Lütfen geçerli bir deneyim giriniz.");
         }
     }
