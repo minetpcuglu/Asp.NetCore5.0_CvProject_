@@ -14,8 +14,9 @@
 # Admin Sayfası
 ![Admin1](https://user-images.githubusercontent.com/77547699/139310969-c04f79df-d198-4adb-bb53-87cddee76378.png)
 ![Admin11](https://user-images.githubusercontent.com/77547699/139311042-8387f4ad-d40c-461c-a6a6-f6805c2bb99d.png)
-![Admin13](https://user-images.githubusercontent.com/77547699/139311009-44e238eb-e6c7-439f-aac9-f575cadc5525.png)
 ![Admin12](https://user-images.githubusercontent.com/77547699/139311015-f19d3c6d-b685-4137-9c11-b07ce410f477.png)
+![Admin13](https://user-images.githubusercontent.com/77547699/139311009-44e238eb-e6c7-439f-aac9-f575cadc5525.png)
+
 
 
 
