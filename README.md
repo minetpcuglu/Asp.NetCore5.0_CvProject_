@@ -13,8 +13,9 @@
 ![sifre](https://user-images.githubusercontent.com/77547699/139310873-73452306-c5e4-4f52-831e-39b16cfe178a.png)
 # Admin Sayfası
 ![Admin1](https://user-images.githubusercontent.com/77547699/139310969-c04f79df-d198-4adb-bb53-87cddee76378.png)
-![Admin13](https://user-images.githubusercontent.com/77547699/139311009-44e238eb-e6c7-439f-aac9-f575cadc5525.png)
 ![Admin12](https://user-images.githubusercontent.com/77547699/139311015-f19d3c6d-b685-4137-9c11-b07ce410f477.png)
+![Admin13](https://user-images.githubusercontent.com/77547699/139311009-44e238eb-e6c7-439f-aac9-f575cadc5525.png)
+
 ![Admin4](https://user-images.githubusercontent.com/77547699/139311037-66faff68-3d39-4da1-87e0-d828b6571aa3.png)
 ![Admin2](https://user-images.githubusercontent.com/77547699/139310986-903e1af5-fa0e-4895-8069-dff34d347669.png)
 ![Admin3](https://user-images.githubusercontent.com/77547699/139310998-ca0cd7b7-3f9b-4348-a13c-ad99a15206be.png)
